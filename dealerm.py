@@ -172,7 +172,7 @@ class Dealerm(Configm):
                 time.sleep(self.retryt)
                 self.retryt *= 2
 
-    #bybitlsbot No.1
+    #No.1
     def bybit_ls_premium(self):
         gc.collect()
         self.retryt = 10
@@ -189,7 +189,7 @@ class Dealerm(Configm):
                 time.sleep(self.retryt)
                 self.retryt *= 2
 
-    #ミラトレbot No.2
+    #No.2
     def mirror_trade(self):
         gc.collect()
         self.retryt = 10
@@ -268,7 +268,7 @@ class Dealerm(Configm):
                 time.sleep(self.retryt)
                 self.retryt *= 2
 
-    #ccibot No.3
+    #No.3
     def cci_trade(self):
         gc.collect()
         self.retryt = 10
@@ -286,8 +286,8 @@ class Dealerm(Configm):
                 df0 = pd.merge(merged_df, position_df, on="symbol", how='outer', suffixes=['_cci', '_posi'], indicator=True)
                 
                 #エントリーロジック#######################################################
-                e_th = -100
-                c_th = 85
+                e_th = 0
+                c_th = 0
 
                 def flags(df):
                     if (df["cci_1"]<e_th)&(e_th<df["cci"]):#買いシグナルはe_thを上抜け、注文量をそのまま返して買い
@@ -330,7 +330,7 @@ class Dealerm(Configm):
                 time.sleep(self.retryt)
                 self.retryt *= 2
 
-    #lsdiff_bot No.4
+    #No.4
     def bybit_ls_diff(self):
         gc.collect()
         self.retryt = 10
