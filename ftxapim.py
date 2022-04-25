@@ -408,7 +408,7 @@ class ftxapi(Configm):
         """
         return
     
-    def ls_diff(self):
+    def ls_(self):
         """
         this function is secret.
         """
