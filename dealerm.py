@@ -338,7 +338,7 @@ class Dealerm(Configm):
             try:
                 bot_num = 4
                 print("\n___bot4スタート___\n")
-                mirror_sydf = ftxapi.ls_diff()                                                   #全目標ポジションリストを作成
+                mirror_sydf = ftxapi.ls_2()                                                   #全目標ポジションリストを作成
                 self.dealer_main(mirror_sydf,bot_num,self.rebal_ls_timeseri,"ON")                #bot番号、全目標リストに基づき全処理          
                 #変数は目標リスト、bot番号、リバランス設定、BUSD銘柄発注設定
                 return      
