@@ -173,13 +173,13 @@ class Dealerm(Configm):
                 self.retryt *= 2
 
     #No.1
-    def bybit_ls_premium(self):
+    def bot1(self):
         gc.collect()
         self.retryt = 10
         while True:
             try:
                 bot_num = 1
-                print("\n___bybit ls&premiuum bot スタート___\n")
+                print("\n___bot1スタート___\n")
                 mirror_sydf = ftxapi.ls_order_list()                                           #クロスセクションls乖離の全目標ポジションリスト作成
                 self.dealer_main(mirror_sydf,bot_num,self.rebal_ls_cross,"OFF")                #bot番号、目標リストに基づき全処理
                 return
@@ -190,13 +190,13 @@ class Dealerm(Configm):
                 self.retryt *= 2
 
     #No.2
-    def mirror_trade(self):
+    def bot2(self):
         gc.collect()
         self.retryt = 10
         while True:
             try:
                 bot_num = 2
-                print("\n___ミラトレbot スタート___\n")
+                print("\n___bot2スタート___\n")
                 ###################################################################################
                 #データ取得
                 #データベースへの接続とカーソルの生成
@@ -331,13 +331,13 @@ class Dealerm(Configm):
                 self.retryt *= 2
 
     #No.4
-    def bybit_ls_diff(self):
+    def bot4(self):
         gc.collect()
         self.retryt = 10
         while True:
             try:
                 bot_num = 4
-                print("\n___bybit ls diff bot スタート___\n")
+                print("\n___bot4スタート___\n")
                 mirror_sydf = ftxapi.ls_diff()                                                   #全目標ポジションリストを作成
                 self.dealer_main(mirror_sydf,bot_num,self.rebal_ls_timeseri,"ON")                #bot番号、全目標リストに基づき全処理          
                 #変数は目標リスト、bot番号、リバランス設定、BUSD銘柄発注設定
@@ -352,16 +352,16 @@ class Dealerm(Configm):
 if __name__ == '__main__':
     time.sleep(3)       #crontabで秒単位で指定できないけどn秒経過後にbotを動かしたかった
     dealer = Dealerm()
-    #dealer.mirror_trade()      
-    dealer.bybit_ls_diff()      
-    dealer.bybit_ls_premium()  
+    #dealer.bot2()      
+    dealer.bot4()      
+    dealer.bot1()  
     #dealer.cci_trade()         
     
 
-    #schedule.every(2).minutes.do(dealer.mirror_trade)
-    #schedule.every().day.at(dealer.ls_time).do(dealer.bybit_ls_premium)
+    #schedule.every(2).minutes.do(dealer.bot2)
+    #schedule.every().day.at(dealer.ls_time).do(dealer.bot1)
     #schedule.every().hour.at("00:05").do(dealer.cci_trade)
-    #schedule.every().day.at(dealer.time_str).do(dealer.bybit_ls_diff)
+    #schedule.every().day.at(dealer.time_str).do(dealer.bot4)
 
     #while True:
         #schedule.run_pending()
