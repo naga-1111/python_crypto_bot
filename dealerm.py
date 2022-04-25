@@ -180,7 +180,7 @@ class Dealerm(Configm):
             try:
                 bot_num = 1
                 print("\n___bot1スタート___\n")
-                mirror_sydf = ftxapi.ls_order_list()                                           #クロスセクションls乖離の全目標ポジションリスト作成
+                mirror_sydf = ftxapi.ls_order_list()                                           #全目標ポジションリスト作成
                 self.dealer_main(mirror_sydf,bot_num,self.rebal_ls_cross,"OFF")                #bot番号、目標リストに基づき全処理
                 return
             except Exception as e:
