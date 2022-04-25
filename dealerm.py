@@ -360,7 +360,7 @@ if __name__ == '__main__':
 
     #schedule.every(1).minutes.do(dealer.bot2)
     #schedule.every().day.at(dealer.ls_time).do(dealer.bot1)
-    #schedule.every().hour.at("00:05").do(dealer.cci_trade)
+    #schedule.every().hour.at("00:01").do(dealer.cci_trade)
     #schedule.every().day.at(dealer.time_str).do(dealer.bot4)
 
     #while True:
