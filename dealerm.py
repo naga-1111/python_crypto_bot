@@ -28,11 +28,11 @@ class Dealerm(Configm):
         self.logger.addHandler(h1)
         return
 
-    #クロスセクションのポジションを変える時間を返す関数
+    #
     def ls_time(self):
         return self.ls_time
     
-    #タイムシリーズのポジションを変える時間を返す関数
+    #
     def time_str(self):
         time_str = f"{self.trade_time+1}" + ":00:05"
         return time_str
