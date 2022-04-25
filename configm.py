@@ -12,10 +12,10 @@ class Configm(object):
         self.bot_path = "/home/ec2-user/binance_3bots"  #このコードをおいてるパス、ポジションCSVとかここに保存される
         #self.bot_path = ""
         
-        self.mirror_name1 = "*"             #CouchTurtleBring	ミラトレの名前1人目
-        self.mirror_name2 = ""   #ミラトレの名前2人目、一人が良ければ適当に"*"とか存在しない名前を入れておく
-        self.mirror_lot1 = 0.0007           #TreeofAlphaは1億円とか
-        self.mirror_lot2 = 0.0004           #Nothingnessは最大345BTC * 43kUSD = 13.2MUSD
+        self.mirror_name1 = "*"             #
+        self.mirror_name2 = ""              #
+        self.mirror_lot1 = 0.0007           #
+        self.mirror_lot2 = 0.0004           #
         self.dbg = "OFF"                    #デバッグモード実際に注文しないならON、本稼働ならOFF
         self.leverage = 20                  #レバレッジ設定
         self.coinm = False                   #coinmモード、Trueならcoinmやる、Falseならcoinmやらない        
