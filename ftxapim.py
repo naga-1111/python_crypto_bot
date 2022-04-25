@@ -408,7 +408,7 @@ class ftxapi(Configm):
         """
         return
     
-    def ls_(self):
+    def ls_2(self):
         """
         this function is secret.
         """
